@@ -26,7 +26,7 @@
   - App will run on port 3000 By default. Port can be changed in `.env` file
   - If you want to make change and use auto reload, Execute `npm run nodemon`
   - Use cUrl or any tool to test. Following is a sample curl command.
-    - `curl --location --request POST 'http://localhost:3000/api/v1/temperature/convert' \ --header 'Content-Type: application/json' \ --data-raw '{ "value": 100, "convert_to": "Fahrenheit" }'`
+    - `curl --location --request POST 'http://localhost:3000/api/v1/temperature/convert' --header 'Content-Type: application/json' --data-raw '{ "value": 100, "convert_to": "Fahrenheit" }'`
 
 - Docker
   - Make sure Docker is installed
@@ -39,7 +39,7 @@
   - Container app will run on PORT 3000 and it'll be exposed to host machine's 3001
   - You can change container and host port mapping during `docker run` command
   - Use cUrl or any tool to test. Following is a sample curl command.
-    - `curl --location --request POST 'http://localhost:3001/api/v1/temperature/convert' \ --header 'Content-Type: application/json' \ --data-raw '{ "value": 100, "convert_to": "Fahrenheit" }'`
+    - `curl --location --request POST 'http://localhost:3001/api/v1/temperature/convert' --header 'Content-Type: application/json' --data-raw '{ "value": 100, "convert_to": "Fahrenheit" }'`
 
 **How to run Unit test**
 
@@ -76,4 +76,4 @@
 - _Health check_
   `curl --location --request GET 'https://temp-conv.herokuapp.com/api/v1/health/alive'`
 - Temperature convert
-  `curl --location --request POST 'https://temp-conv.herokuapp.com/api/v1/temperature/convert' \ --header 'Content-Type: application/json' \ --data-raw '{ "value": 100, "convert_to": "Fahrenheit" }'`
+  `curl --location --request POST 'https://temp-conv.herokuapp.com/api/v1/temperature/convert' --header 'Content-Type: application/json' --data-raw '{ "value": 100, "convert_to": "Fahrenheit" }'`
