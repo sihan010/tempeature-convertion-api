@@ -1,0 +1,37 @@
+{
+  "name": "temperature_conversion_api",
+  "version": "1.0.0",
+  "description": "API to convert temperature",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "nodemon": "nodemon start",
+    "test": "jest"
+  },
+  "keywords": [
+    "temperature",
+    "temperature conversion",
+    "temperature api"
+  ],
+  "author": "Sihan",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.18",
+    "supertest": "^6.2.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  }
+}
