@@ -31,9 +31,9 @@ const validate = (value, unit) => {
   else return { valid: false, errorMessages };
 };
 
-const convertToCelsius = (value) => parseFloat((value * 1.8 + 32).toFixed(2));
+const convertToCelsius = (value) => parseFloat(((value - 32) / 1.8).toFixed(2));
 
 const convertToFahrenheight = (value) =>
-  parseFloat(((value - 32) / 1.8).toFixed(2));
+  parseFloat((value * 1.8 + 32).toFixed(2));
 
 export { convertToCelsius, convertToFahrenheight, validate, SUPPORTED_UNITS };

@@ -62,11 +62,11 @@ describe("POST /api/v1/temperature/convert", () => {
         .post("/api/v1/temperature/convert")
         .send({
           value: 30,
-          convert_to: "Fahrenheit",
+          convert_to: "Celsius",
         })
         .expect(200, {
           result: -1.11,
-          unit: "Fahrenheit",
+          unit: "Celsius",
         });
     });
   });
@@ -77,11 +77,11 @@ describe("POST /api/v1/temperature/convert", () => {
         .post("/api/v1/temperature/convert")
         .send({
           value: -1.11,
-          convert_to: "Celsius",
+          convert_to: "Fahrenheit",
         })
         .expect(200, {
           result: 30,
-          unit: "Celsius",
+          unit: "Fahrenheit",
         });
     });
   });
